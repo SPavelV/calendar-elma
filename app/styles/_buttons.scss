@@ -1,0 +1,97 @@
+@import 'variables';
+@import 'libs/bootstrap/scss/variables';
+
+
+button {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+}
+
+.btn {
+  border: 0;
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &--arrow-date {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    color: $red;
+
+    @include  media-breakpoint-up(sm) {
+      color: #000;
+    }
+  }
+
+  &--switching-view,
+  &--search-mobile,
+  &--add-event {
+    color: $red;
+  }
+
+  &--pagination {
+    padding: 2px 3px 3px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+  }
+
+  &--view-switching {
+    flex: 0 1 60px;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    padding: 2px 5px 3px;
+    text-align: center;
+    color: $red;
+    
+    &.active {
+      background-color: $red;
+      color: #fff;
+    }
+    
+    @include media-breakpoint-up(md) {
+      color: #000;
+
+      &.active {
+        background-color: $gray-600;
+        color: #fff;
+      }
+    }
+    
+    & + .btn--view-switching {
+      border-left: 1px solid $red;
+
+      @include media-breakpoint-up(md) {
+        border-left: 1px solid $gray-300;
+      }
+    }
+  }
+
+  &--search-mobile {
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+
+  &--add-event {
+    @include media-breakpoint-up(md) {
+      padding: 2px 3px 3px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      border: 1px solid $gray-300;
+      color: #000;
+      background-color: #fff;
+    }
+  }
+
+}

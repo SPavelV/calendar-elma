@@ -1,0 +1,101 @@
+.interesting-articles {
+
+  &__groupname {
+    @extend .last-reviews__groupname;
+  }
+
+  &__body {
+    @extend .clearfix;
+    padding: 22px 43px 30px;
+    background-color: white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.22);
+
+
+    @media (max-width: 750px) {
+      padding: 21px 16px 28px;
+    }
+  }
+
+  &__item {
+    float: left;
+    width: percentage(230/1054);
+    margin-right: percentage(44/1054);
+
+    @media (max-width: 991px) {
+      width: percentage(187/720);
+      margin-right: percentage(79/720);
+    }
+
+    @media (max-width: 750px) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 34px;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+
+      @media (max-width: 991px) {
+        display: none;
+      }
+    }
+
+    &:nth-of-type(3) {
+
+      @media (max-width: 991px) {
+        margin-right: 0;
+      }
+
+      @media (max-width: 991px) {
+        margin-bottom: 0;
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__img {
+    position: relative;
+    width: 100%;
+    height: 153px;
+    margin-bottom: 15px;
+
+    @media (max-width: 991px) {
+      height: 125px;
+    }
+
+    @media (max-width: 750px) {
+      height: 173px;
+    }
+
+  }
+
+  &__inner-img {
+    @extend .top-news__inner-img;
+
+    @media (max-width: 750px) {
+      height: 125px;
+    }
+
+    @media (max-width: 750px) {
+      height: 173px;
+    }
+  }
+
+  &__title {
+    color: $first-color;
+    font-family: inherit;
+    font-size: em(16px);
+    font-weight: $f-bold;
+    line-height: calc-em(22px,16px);
+
+    @at-root .interesting-articles__item:hover .interesting-articles__title {
+      color: $second-color;
+      text-decoration: none;
+    }
+  }
+
+}
+//END.interesting-articles

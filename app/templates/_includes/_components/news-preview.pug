@@ -1,0 +1,148 @@
+.page__line
+
+  .news-section
+    .news-section__inner-all
+      .news-navigator
+        .news-navigator__header
+          .news-navigator__groupname Новости
+          .news-navigator__menu.news-navigator__menu--gradient
+            ul.news-nav
+              li
+                a(href="").link-news-nav.link-news-nav--active Все
+              li
+                a(href="").link-news-nav.js-open-subnav-news Финансы
+                ul.news-nav__subnav.news-nav__subnav--left-30px
+                  li
+                    a(href="").link-news-subnav.link-news-navsub--acitve Сравнения
+                  li
+                    a(href="").link-news-subnav Истории
+                  li
+                    a(href="").link-news-subnav Советы
+              li
+                a(href="").link-news-nav.js-open-subnav-news Энергетика
+                ul.news-nav__subnav.news-nav__subnav--left-30px
+                  li
+                    a(href="").link-news-subnav.link-news-navsub--acitve Сравнения
+                  li
+                    a(href="").link-news-subnav Истории
+                  li
+                    a(href="").link-news-subnav Советы
+              li
+                a(href="").link-news-nav Котировки
+              li.hidden-xs.hidden-sm
+                a(href="").link-news-nav.js-open-subnav-news Eще
+                ul.news-nav__subnav
+                  li
+                    a(href="").link-news-subnav.link-news-navsub--acitve Сравнения
+                  li
+                    a(href="").link-news-subnav Истории
+                  li
+                    a(href="").link-news-subnav Советы
+              li.hidden-lg.hidden-md
+                a(href="").link-news-nav Биржа
+            //END.news-nav
+          //END .news-navigator__menu
+        //END.news-navigator__header
+        .news-navigator__body
+          .news-navigator__category-item.active#all-news
+
+            .news-navigator__item
+              .news-navigator__inner-img
+                .news-navigator__img(style="background-image: url(images/news-main-cnt.jpg)")
+                  img(src="images/news-main-cnt.jpg",
+                  alt="Альбина Наебулинннна")
+              .news-navigator__descr
+                a.link.link--news-title(href="")
+                  h2 Набиуллина пообещала продолжить очищение банковского сектора
+                p.
+                  В банковской системе РФ нет системных рисков,
+                  запас капитала у банков для наращивания
+                  кредитования составляет 1,8 триллиона рублей,
+                  сообщила глава ЦБ РФ Эльвира Набиуллина.
+                  "В целом же, по нашим оценкам, в банковской
+                  системе нет системных рисков, есть запас
+                  прочности и есть потенциал для наращивания
+                  кредитования", — отметила Набиуллина,
+                  выступая на съезде Ассоциации российских банков.
+              //END.news-navigator__descr
+              .news-navigator__service
+                .news-navigator__date
+                  | 23.03.2017
+                  span.hidden-xs &nbsp;10:50
+                .news-navigator__category-link
+                  a.btn.btn--small.btn--gray-blue(href="") Котировки
+                a.news-navigator__comments-link(href="")
+                  .icon-comments-link
+                    svg(role="img"): use(xlink:href="#comments-link")
+                  .news-navigator__qty-comments +56
+
+              //END .news-navigator__service
+            //END .news-navigator__item
+
+            .news-navigator__item
+              .news-navigator__descr
+                a.link.link--news-title(href="")
+                  h2 Как оплатить МТС «Спасибо» от Сбербанка?
+                p.
+                  Инструкция - как пополнить баланс МТС бонусами Спасибо. Подробные условия и лимиты.
+              //END.news-navigator__descr
+              .news-navigator__service
+                .news-navigator__date
+                  | 23.03.2017
+                  span.hidden-xs &nbsp;09:12
+                .news-navigator__category-link
+                  a.btn.btn--small.btn--gray-blue(href="") Финансы
+                a.news-navigator__comments-link(href="")
+                  .icon-comments-link
+                    svg(role="img"): use(xlink:href="#comments-link")
+                  .news-navigator__qty-comments +7
+              //END .news-navigator__service
+            //END .news-navigator__item
+
+            .news-navigator__item
+              .news-navigator__descr
+                a.link.link--news-title(href="")
+                  h2 Сняли деньги с карты Сбербанка - что делать?
+                p.
+                  Схема действий при краже денег с банковской карты - советы и рекомендации.
+              //END.news-navigator__descr
+              .news-navigator__service
+                .news-navigator__date
+                  | 21.03.2017
+                  span.hidden-xs &nbsp;09:12
+                .news-navigator__category-link
+                  a.btn.btn--small.btn--gray-blue(href="") Финансы
+                a.news-navigator__comments-link(href="")
+                  .icon-comments-link
+                    svg(role="img"): use(xlink:href="#comments-link")
+                  .news-navigator__qty-comments +3
+              //END .news-navigator__service
+            //END .news-navigator__item
+
+
+          //END .news-navigator__category-item
+
+          .news-navigator__inner-btn-all
+            a.btn.btn--middle-165px-40px.btn--white-lblue(href="") Читать еще
+
+        //END.news-navigator__body
+      //END.news-navigator
+
+
+
+      .news-section__inner-feed
+        ul.news-feed
+          - for (var i = 0; i < 8; i++)
+            li.news-feed__item
+              .news-feed__date 23.03.2017
+              a.news-feed__title.link(href="")
+                | Продажа монет в Сбербанке: стоимость и условия
+                | Продажа монет в Сбербанке.
+                | Продажа монет в Сбербанке.
+
+
+      //END.news-section__inner-feed
+    //END.news-section__inner-all
+
+  //END .news-section
+//END .page__line

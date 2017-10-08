@@ -1,0 +1,131 @@
+.list-links {
+  @extend .clearfix;
+  margin-bottom: 65px;
+  padding: 38px 44px;
+  background-color: white;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.22);
+
+  @media (max-width: 991px) {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  @media (max-width: 750px) {
+    padding: 0;
+    margin-bottom: 44px;
+  }
+  
+  &__inner {
+    float: left;
+    width: percentage(708/1052);
+
+    @media (max-width: 991px) {
+      width: percentage(360/720);
+    }
+
+    @media (max-width: 750px) {
+      width: 100%;
+    }
+  }
+
+  &__item-exchange-rates {
+    float: left;
+    padding-right: 10px;
+    width: percentage(318/708);
+
+    @media (max-width: 991px) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 750px) {
+      padding: 25px 15px 22px;
+      border-bottom: 1px solid #e5e9f2;
+      margin-bottom: 0;
+    }
+  }
+
+  &__groupname {
+    margin-bottom: 13px;
+    color: $dark-blue;
+    font-family: inherit;
+    font-size: em(16px);
+    font-weight: $f-bold;
+    line-height: calc-em(20px, 16px);
+
+    @media (max-width: 991px) {
+      cursor: pointer;
+    }
+
+    @media (max-width: 750px) {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+  }
+
+  &__items {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: 750px) {
+      margin-top: 20px;
+    }
+
+    &--hidden-desktop {
+      @media (max-width: 991px) {
+        display: none;
+        padding-left: 18px;
+      }
+    }
+  }
+
+  @at-root .link--list {
+    color: $dark-blue;
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: inherit;
+    line-height: em(28px);
+
+    &:hover {
+      color: $second-color;
+    }
+  }
+
+  &__item-other-banks {
+    float: left;
+    padding-right: 10px;
+    width: percentage(390/708);
+
+    @media (max-width: 991px) {
+      width: 100%;
+    }
+
+    @media (max-width: 750px) {
+      padding: 25px 15px 22px;
+      border-bottom: 1px solid #e5e9f2;
+    }
+  }
+
+  &__item-reviews-banks {
+    float: left;
+    padding-right: 10px;
+    width: percentage(343/1052);
+
+    @media (max-width: 991px) {
+      float: right;
+      width: percentage(280 /720);
+      padding-right: 0;
+    }
+
+    @media (max-width: 750px) {
+      width: 100%;
+      padding: 25px 15px 22px;
+      border-bottom: 1px solid #e5e9f2;
+    }
+  }
+
+}
+
+//END.list-links

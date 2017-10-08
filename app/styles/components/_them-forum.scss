@@ -1,0 +1,64 @@
+.them-forum {
+  @extend .clearfix;
+  background-color: white;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.22);
+
+  &__item {
+    @extend .clearfix;
+    padding: 34px 42px 30px;
+    border-bottom: 1px solid #e5e9f2;
+  }
+
+  &__info-message {
+    @extend .comments__info-message;
+    margin-bottom: 18px;
+  }
+
+  &__avatar {
+    @extend .comments__avatar;
+  }
+
+  &__inner-status {
+    @extend .comments__inner-status;
+  }
+
+  &__user-name {
+    @extend .comments__user-name;
+  }
+
+  &__status {
+    @extend .comments__status;
+  }
+
+  &__author {
+    @extend .comments__author;
+  }
+
+  &__date{
+    @extend .comments__date;
+    display: block;
+    margin-top: 5px;
+  }
+
+  &__descr {
+    @extend .comments__descr;
+    margin-top: 0;
+  }
+
+  &__message {
+    @extend .comments__message;
+  }
+
+  &__service {
+    @extend .comments__service;
+  }
+
+  &__link-answer {
+    @extend .comments__link-answer;
+  }
+
+  &__likes {
+    @extend  .comments__likes;
+  }
+}
+//END.them-forum

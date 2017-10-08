@@ -1,0 +1,124 @@
+.company-products {
+
+  &__groupname {
+    @extend .last-reviews__groupname;
+
+    @media(max-width: 750px) {
+      margin-bottom: 17px;
+    };
+  }
+
+  &__row {
+    @extend .prev-services__list;
+
+  }
+  @at-root .company-products__row:last-of-type {
+    margin-top: 30px;
+
+    @media(max-width: 750px) {
+      margin-top: 0;
+    }
+  }
+
+  &__item {
+    @extend %list-items__item;
+    width: percentage(245/800);
+    padding: 34px 10px 35px 20px;
+    height: 122px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 0 11px rgba(0, 0, 0, 0.25);
+    font-size: $font-size-base;
+    color: $first-color;
+    transition: all 50ms;
+
+    @media (max-width: 991px) {
+      width: 220px;
+      margin-bottom: 22px;
+      margin-right: 30px;
+      padding-left: 25px;
+      //padding-right: 20px;
+    }
+
+    @media (max-width: 750px) {
+      height: 72px;
+      width: 100%;
+      margin: 0;
+      padding: 20px 18px 20px 28px;
+      box-shadow: 0 0 0 0 #fff;
+      border-bottom: 1px solid #e5e9f2;;
+    }
+
+    &:nth-child(3),
+    &:nth-child(5) {
+      @media (max-width: 991px) {
+        margin-right: 0;
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+      outline: 3px solid #fff;
+      box-shadow: 0 0 29px rgba(0, 0, 0, 0.35);
+
+      @media (max-width: 750px) {
+        outline: 0;
+        box-shadow: 0 0 0 0 #fff;
+      }
+
+      & h2 {
+        color: $second-color;
+      }
+    }
+  }
+
+  &__descr-item {
+    @extend .prev-services__descr-item;
+
+    //@media (max-width: 991px) {
+    //  width: 62%;
+    //}
+    //
+    //@media (max-width: 750px) {
+    //  width: 73%;
+    //  float: right;
+    //}
+
+    h2 {
+      margin-bottom: 12px;
+      margin-top: 0;
+      color: inherit;
+      font-family: inherit;
+      font-size: calc-em(20px, 15px);
+      font-weight: $f-bold;
+
+      @media (max-width: 991px) {
+        font-size: calc-em(16px, 15px);
+      }
+
+      @media (max-width: 750px) {
+        margin-top: 6px;
+      }
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+      color: $light-gray;
+      font-family: inherit;
+      font-size: em(13px);
+      font-weight: inherit;
+      line-height: em(18px);
+
+      @media (max-width: 991px) {
+        font-size: em(13px);
+      }
+
+      @media (max-width: 750px) {
+        display: none;
+      }
+    }
+  }
+}
+
+//END.company-products

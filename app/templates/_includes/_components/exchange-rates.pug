@@ -1,0 +1,53 @@
+.exchange-rates
+  .exchange-rates__groupname
+    | Курсы обмена доллара США в банках
+  table.exchange-rates__table
+
+    thead.exchange-rates__thead
+      tr.exchange-rates__tr
+        th.exchange-rates__th.exchange-rates__th--place Банк
+        th.exchange-rates__th.exchange-rates__th--buy Покупка
+        th.exchange-rates__th.exchange-rates__th--sale Продажа
+    //END thead.exchange-rates__thead
+
+    tbody.exchange-rates__tbody
+
+      tr.exchange-rates__tr
+        td.exchange-rates__td.exchange-rates__td--place
+          .exchange-rates__img
+            img(src="images/bin-logo.png")
+        td.exchange-rates__td.exchange-rates__td--buy
+          | 56,50
+          |&nbsp;₽
+        td.exchange-rates__td.exchange-rates__td--sale
+          | 57,38
+          |&nbsp;₽
+
+      tr.exchange-rates__tr
+        td.exchange-rates__td.exchange-rates__td--place
+          .exchange-rates__img
+            img(src="images/skb-logo.png")
+        td.exchange-rates__td.exchange-rates__td--buy
+          | 56,00
+          |&nbsp;₽
+        td.exchange-rates__td.exchange-rates__td--sale
+          | 57,40
+          |&nbsp;₽
+
+      tr.exchange-rates__tr
+        td.exchange-rates__td.exchange-rates__td--place
+          .exchange-rates__img
+            img(src="images/alfa-logo.png")
+        td.exchange-rates__td.exchange-rates__td--buy
+          | 56,00
+          |&nbsp;₽
+        td.exchange-rates__td.exchange-rates__td--sale
+          | 57,40
+          |&nbsp;₽
+    //END tbody.exchange-rates__tbody
+  //END table.exchange-rates__table
+
+  .exchange-rates__inner-btn
+    a.btn.btn--183px-40px.btn--white-lblue(href="") Все курсы
+
+//END.exchange-rates

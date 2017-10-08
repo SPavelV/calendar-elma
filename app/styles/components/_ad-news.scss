@@ -1,0 +1,16 @@
+.ad-news {
+  @extend .company-info;
+
+  @media(max-width: 750px) {
+    margin-bottom: 0;
+  }
+
+  &__groupname {
+    @extend .company-info__groupname;
+  }
+
+  &__text {
+    @extend .company-info__text;
+  }
+}
+//END.ad-news

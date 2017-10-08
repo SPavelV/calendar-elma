@@ -1,0 +1,416 @@
+form.review-form.js-form(method="post", action="")
+  .review-form__body
+    .review-form__inner
+      .review-form__select-company
+        select.js-select(data-placeholder="Банк")
+          option
+          option(value="Сбербанк") Сбербанк
+          option(value="Быстробанк") Быстробанк
+          option(value="ВТБ24") ВТБ24
+          option(value="РусскийСтандарт") Русский Стандарт
+
+      //END.review-form__select-company
+
+      .review-form__select-city
+        select.js-select(data-placeholder="Город")
+          option
+          option(value="Ижевск") Ижевск
+          option(value="Сарапул") Сарапул
+          option(value="Воткинск") Воткинск
+          option(value="Глазов") Глазов
+      //END.review-form__select-city
+
+      .review-form__select-product
+        select.js-select(data-placeholder="Продукт банка")
+          option
+          option(value="Ипотека") Ипотека
+          option(value="Авто Кредит") Авто Кредит
+          option(value="Кредитная Карта") Кредитная Карта
+          option(value="Потреб Кредит") Потреб Кредит
+      //END.review-form__select-product
+    //END.review-form__inner
+
+    .review-form__inner
+
+      .review-form__title
+        .review-form__error-msg
+          span.alert.alert--danger Укажите заголовок отзыва
+        input.input.input--reivew.border-red-1px(type='text',
+        id="review-title",
+        name="review-title",
+        placeholder="Заголовок отзыва")
+
+
+    .review-form__inner
+      .review-form__textarea(id="review-textarea")
+        textarea.textarea.textarea--review(placeholder="Ваш отзыв")
+      label(for="review-textarea").review-form__label-textarea
+        | Укажете положительные и отрицательные стороны работы с банком.
+
+    .review-form__inner
+      .review-form__select-rating
+        select.js-select(data-placeholder="Оценка банку")
+          option
+          option(value="Oтлично") Oтлично
+          option(value="Хорошо") Хорошо
+          option(value="Нормально") Нормально
+          option(value="Удовлетворительно") Удовлетворительно
+          option(value="Плохо") Плохо
+      //END.review-form__select-rating
+
+      .review-form__input-name
+        input.input.input--reivew(type="text",
+        name="name-user",
+        id="name-user",
+        placeholder="Имя")
+
+      .review-form__email
+        input.input.input--reivew(type="email",
+        name="email",
+        id="email",
+        placeholder="email")
+
+    //END.review-form__inner
+
+  //END.review-form__body
+
+
+  .review-form__footer
+    .review-form__accept
+      input(type="checkbox", name="accept-review", id="accept-review")
+      label.review-form__label-accept.noselect(for="accept-review")
+        i.icon.icon-checkbox-review
+        |Я принимаю&nbsp;
+        a(href="") условия передачи информации
+        .alert.alert--danger.hidden Для продолжения нужно согласие с условиями
+    //END.review-form__accept
+
+    .review-form__inner-submit
+      button(type="reset").btn.btn--white-lblue.btn--152px-40px Отменить
+      button(type="submit").btn.btn--green.btn--152px-40px Отправить
+
+  //END.review-form__footer
+
+  .review-form__footer
+    .review-form__accept
+      input(type="checkbox", name="accept-review", id="accept-review2")
+      label.review-form__label-accept.noselect(for="accept-review2")
+        i.icon.icon-checkbox-review.border-red-1px
+        | Я принимаю&nbsp;
+        a(href="") условия передачи информации
+        .alert.alert--danger Для продолжения нужно согласие с условиями
+    //END.review-form__accept
+
+//END.review-form
+
+
+//form.review-form.js-form(method="post", action="")
+  .review-form__body
+    .review-form__inner
+      .review-form__select-company
+        .review-form__error-msg
+          span.alert.alert--danger Укажите название банка
+        .dropdown
+          button.btn.btn--select-drpdwn.dropdown-toggle.border-red-1px(type="button",
+          id="dropdownMenu1",
+          data-toggle="dropdown",
+          aria-haspopup="true",
+          aria-expanded="false")
+            | Банк
+          i.icon.icon--caret
+          ul.dropdown-menu(aria-labelledby="dropdownMenu1")
+            li.dropdown-menu__item
+              .checkbox
+                label.label
+                  input#filter-Company1(type="checkbox",
+                  value='sber', name="sber")
+                  | Сбербанк
+            li.dropdown-menu__item
+              .checkbox
+                label.label
+                  input#filter-Company2(type="checkbox",
+                  value='bistro', name="bistro")
+                  | Быстробанк
+            li.dropdown-menu__item
+              .checkbox
+                label.label
+                  input#filter-Company3(type="checkbox",
+                  value='vtb24', name="vtb24")
+                  | ВТБ24
+            li.dropdown-menu__item
+              .checkbox
+                label.label
+                  input#filter-Company4(type="checkbox",
+                  value='russt', name="russt")
+                  | Русский Стандарт
+
+      //END.review-form__select-company
+
+      .review-form__select-city
+        .dropdown
+          button.btn.btn--select-drpdwn.dropdown-toggle(type="button",
+          id="dropdownMenu2",
+          data-toggle="dropdown",
+          aria-haspopup="true",
+          aria-expanded="false")
+            | Город
+          i.icon.icon--caret
+          ul.dropdown-menu(aria-labelledby="dropdownMenu2")
+            li.dropdown-menu__item
+              .checkbox
+                label.label
+                  input#filter-city1(type="checkbox",
+                  value='Izh', name="Izh")
+                  | Ижевск
+            li.dropdown-menu__item
+              .checkbox
+                label.label
+                  input#filter-city2(type="checkbox",
+                  value='Sarapul', name="Sarapul")
+                  | Сарапул
+            li.dropdown-menu__item
+              .checkbox
+                label.label
+                  input#filter-city3(type="checkbox",
+                  value='Votkinsk', name="Votkinsk")
+                  | Воткинск
+
+            li.dropdown-menu__item
+              .checkbox
+                label.label
+                  input#filter-city4(type="checkbox",
+                  value='Glazov', name="Glazov")
+                  | Глазов
+
+      //END.review-form__select-city
+
+      .review-form__select-product
+        .dropdown
+          button.btn.btn--select-drpdwn.dropdown-toggle(type="button",
+          id="dropdownMenu3",
+          data-toggle="dropdown",
+          aria-haspopup="true",
+          aria-expanded="false")
+            | Продукт банка
+          i.icon.icon--caret
+          ul.dropdown-menu(aria-labelledby="dropdownMenu3")
+            li.dropdown-menu__item
+              .checkbox
+                label.label
+                  input#filter-product1(type="checkbox",
+                  value='hypothec', name="hypothec")
+                  | Ипотека
+            li.dropdown-menu__item
+              .checkbox
+                label.label
+                  input#filter-product2(type="checkbox",
+                  value='auto-credit', name="auto-credit")
+                  | Авто кредит
+            li.dropdown-menu__item
+              .checkbox
+                label.label
+                  input#filter-product3(type="checkbox",
+                  value='credit-cart', name="credit-cart")
+                  | Кредитная карта
+            li.dropdown-menu__item
+              .checkbox
+                label.label
+                  input#filter-product4(type="checkbox",
+                  value='credit-cart', name="credit-cart")
+                  | Потребительский Кредит
+      //END.review-form__select-product
+    //END.review-form__inner
+
+    .review-form__inner
+
+      .review-form__title
+        .review-form__error-msg
+          span.alert.alert--danger Укажите заголовок отзыва
+        input.input.input--reivew.border-red-1px(type='text',
+        id="review-title",
+        name="review-title",
+        placeholder="Заголовок отзыва")
+
+
+
+    .review-form__inner
+      .review-form__textarea(id="review-textarea")
+        textarea.textarea.textarea--review(placeholder="Ваш отзыв")
+      label(for="review-textarea").review-form__label-textarea
+        | Укажете положительные и отрицательные стороны работы с банком.
+
+    .review-form__inner
+      .review-form__select-rating
+        .dropdown
+          button.btn.btn--select-drpdwn.dropdown-toggle(type="button",
+          id="dropdownMenu4",
+          data-toggle="dropdown",
+          aria-haspopup="true",
+          aria-expanded="false")
+            | Оценка банку
+          i.icon.icon--caret
+          ul.dropdown-menu(aria-labelledby="dropdownMenu4")
+            li.dropdown-menu__item
+              .radio
+                label.label
+                  input#filter-rating5(type="radio",
+                  value='5', name="rating-company")
+                  | Oтлично
+
+            li.dropdown-menu__item
+              .radio
+                label.label
+                  input#filter-rating4(type="radio",
+                  value='4', name="rating-company")
+                  | Oтлично
+
+            li.dropdown-menu__item
+              .radio
+                label.label
+                  input#filter-rating3(type="radio",
+                  value='3', name="rating-company")
+                  | Нормально
+
+            li.dropdown-menu__item
+              .radio
+                label.label
+                  input#filter-rating2(type="radio",
+                  value='2', name="rating-company")
+                  | Удовлетворительно
+
+            li.dropdown-menu__item
+              .radio
+                label.label
+                  input#filter-rating1(type="radio",
+                  value='1', name="rating-company")
+                  | Плохо
+
+      .review-form__input-name
+        input.input.input--reivew(type="text",
+        name="name-user",
+        id="name-user",
+        placeholder="Имя")
+
+      .review-form__email
+        input.input.input--reivew(type="email",
+        name="email",
+        id="email",
+        placeholder="email")
+
+    //END.review-form__inner
+
+  //END.review-form__body
+
+
+  .review-form__footer
+    .review-form__accept
+      input(type="checkbox", name="accept-review", id="accept-review")
+      label.review-form__label-accept.noselect(for="accept-review")
+        i.icon.icon-checkbox-review
+        |Я принимаю&nbsp;
+        a(href="") условия передачи информации
+        .alert.alert--danger.hidden Для продолжения нужно согласие с условиями
+    //END.review-form__accept
+
+    .review-form__inner-submit
+      button(type="reset").btn.btn--white-lblue.btn--152px-40px Отменить
+      button(type="submit").btn.btn--green.btn--152px-40px Отправить
+
+  //END.review-form__footer
+
+  .review-form__footer
+    .review-form__accept
+      input(type="checkbox", name="accept-review", id="accept-review2" disabled="disabled")
+      label.review-form__label-accept.noselect(for="accept-review2")
+        i.icon.icon-checkbox-review
+        | Я принимаю&nbsp;
+        a(href="") условия передачи информации
+        .alert.alert--danger Для продолжения нужно согласие с условиями
+    //END.review-form__accept
+
+//END.review-form
+
+
+
+//form.review-form.js-form(method="post", action="")
+  //  .review-form__body
+  //    .review-form__inner
+  //      .review-form__select-company
+  //        select
+  //          option(value="Сбербанк") Сбербанк
+  //          option(value="Быстробанк") Быстробанк
+  //          option(value="ВТБ24") ВТБ24
+  //          option(value="РусскийСтандарт") Русский Стандарт
+  //      //END.review-form__select-company
+  //
+  //      .review-form__select-city
+  //        select
+  //          option(value="Ижевск") Ижевск
+  //          option(value="Сарапул") Сарапул
+  //          option(value="Воткинск") Воткинск
+  //          option(value="Глазов") Глазов
+  //      //END.review-form__select-city
+  //
+  //      .review-form__select-product
+  //        select
+  //          option(value="Ипотека") Ипотека
+  //          option(value="Авто Кредит") Авто Кредит
+  //          option(value="Кредитная Карта") Кредитная Карта
+  //          option(value="Потреб Кредит") Потреб Кредит
+  //      //END.review-form__select-product
+  //
+  //      .review-form__error-msg
+  //        span.alert.alert--danger Укажите название банка
+  //
+  //      .review-form__title
+  //        input(type='text',
+  //        id="review-title",
+  //        name="review-title",
+  //        placeholder="Заголовок отзыва")
+  //
+  //      .review-form__error-msg
+  //        span.alert.alert--danger Заголовок отзыва
+  //
+  //      .review-form__textarea(id="review-textarea")
+  //        textarea(placeholder="Ваш отзыв")
+  //      label(for="review-textarea").review-form__label-textarea
+  //        | Укажете положительные и отрицательные стороны работы с банком.
+  //
+  //      .review-form__select-rating
+  //        select
+  //          option(value="Oтлично") Oтлично
+  //          option(value="Хорошо") Хорошо
+  //          option(value="Нормально") Нормально
+  //          option(value="Удовлетворительно") Удовлетворительно
+  //          option(value="Плохо") Плохо
+  //
+  //      .review-forem__input-name
+  //        input(type="text",
+  //        name="name-user",
+  //        id="name-user",
+  //        placeholder="Имя")
+  //
+  //      .review-form__email
+  //        input(type="email", name="email", id="email", placeholder="email")
+  //
+  //    //END.review-form__inner
+  //
+  //  //END.review-form__body
+  //
+  //
+  //  .review-form__footer
+  //    .review-form__accept
+  //      input(type="checkbox", name="accept-review", id="accept-review")
+  //      label.review-form__label-accept Я принимаю условия передачи информации
+  //      span.alert.alert--danger Для продолжения нужно согласие с условиями
+  //    //END.review-form__accept
+  //
+  //    .review-form__inner-btns
+  //      button(type="reset").btn.btn--white-lblue Отменить
+  //      button(type="submit").btn.btn-green.btn--152px-40px Отправить
+  //
+  //  //END.review-form__footer
+  //
+  //
+  //
+

@@ -1,0 +1,31 @@
+.archive {
+  &__groupname {
+    @extend .all-topics__groupname;
+  }
+
+  &__body {
+    margin: 0;
+    padding: 39px 27px 29px 44px;
+    background-color: white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.22);
+    list-style-type: none;
+    font-size: 0;
+
+    @media (max-width: 750px) {
+      padding: 21px 10px 15px;
+      text-align: center;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    @media (max-width: 750px) {
+      margin: 0 5px 10px;
+    }
+  }
+}
+//END archive

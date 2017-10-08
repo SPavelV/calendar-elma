@@ -1,0 +1,21 @@
+.profile-login {
+  font-size: 0;
+
+  &__link {
+    margin-right: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: $font-size-base;
+    line-height: $font-size-base + 10;
+    font-weight: $f-bold;
+    color: $first-color;
+  }
+
+  &__avatar {
+    @extend .comments__avatar;
+    margin-right: 0;
+
+  }
+}
+
+//END.profile-login

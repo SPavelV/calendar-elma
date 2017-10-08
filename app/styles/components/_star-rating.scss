@@ -1,0 +1,46 @@
+.star-rating {
+
+  &-view {
+    position: relative;
+    //display: inline-block;
+    //vertical-align: middle;
+    //width: 100%;
+    //height: 17px;
+
+    &__fill {
+      position: absolute;
+      width: 0;
+      height: 15px;
+      left: 0;
+      top: 0;
+      overflow: hidden;
+    }
+
+    @at-root .star-rating-view[data-rating="0"] .star-rating-view__fill {
+      width: 0;
+    }
+
+    @at-root .star-rating-view[data-rating="1"] .star-rating-view__fill {
+      width: 17px;
+    }
+
+    @at-root .star-rating-view[data-rating="2"] .star-rating-view__fill {
+      width: 34px;
+    }
+
+    @at-root .star-rating-view[data-rating="3"] .star-rating-view__fill {
+      width: 52px;
+    }
+
+    @at-root .star-rating-view[data-rating="4"] .star-rating-view__fill {
+      width: 69px;
+    }
+
+    @at-root .star-rating-view[data-rating="5"] .star-rating-view__fill {
+      width: 86px;
+    }
+
+  }
+
+}
+//END star-rating

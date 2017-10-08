@@ -1,0 +1,46 @@
+.rate-table {
+  width: 100%;
+
+  &__col-currency {
+    width: percentage(229/716);
+  }
+
+  &__col-code,
+  &__col-changes {
+    width: percentage(162/716);
+  }
+
+  &__col-cost {
+    width: percentage(161/716);
+  }
+
+  &__th {
+    @extend .ratings-table__th;
+    text-align: left;
+    padding: 27px 10px 17px 25px;
+    border: 1px solid #c6d3eb;
+
+    @media(max-width: 750px) {
+      padding-left: 15px;
+    }
+  }
+
+  &__td {
+    padding: 22px 10px 21px 27px;
+    border: 1px solid #c6d3eb;
+    font-size: 1em;
+    color: $first-color;
+
+    @media(max-width: 750px) {
+      padding: 13px 10px 10px 10px;
+      font-size: 13px;
+    }
+
+    &:first-of-type{
+      color: $second-color;
+    }
+  }
+
+}
+
+//END .rate-table

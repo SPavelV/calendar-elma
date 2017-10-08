@@ -1,0 +1,134 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$mrf-down-arrow-name: 'mrf_down-arrow';
+$mrf-down-arrow-x: 0px;
+$mrf-down-arrow-y: 5px;
+$mrf-down-arrow-offset-x: 0px;
+$mrf-down-arrow-offset-y: -5px;
+$mrf-down-arrow-width: 10px;
+$mrf-down-arrow-height: 6px;
+$mrf-down-arrow-total-width: 144px;
+$mrf-down-arrow-total-height: 131px;
+$mrf-down-arrow-image: '../images/mrf-sprite.png';
+$mrf-down-arrow: (0px, 5px, 0px, -5px, 10px, 6px, 144px, 131px, '../images/mrf-sprite.png', 'mrf_down-arrow', );
+$mrf-logo-m-name: 'mrf_logo-m';
+$mrf-logo-m-x: 0px;
+$mrf-logo-m-y: 27px;
+$mrf-logo-m-offset-x: 0px;
+$mrf-logo-m-offset-y: -27px;
+$mrf-logo-m-width: 41px;
+$mrf-logo-m-height: 48px;
+$mrf-logo-m-total-width: 144px;
+$mrf-logo-m-total-height: 131px;
+$mrf-logo-m-image: '../images/mrf-sprite.png';
+$mrf-logo-m: (0px, 27px, 0px, -27px, 41px, 48px, 144px, 131px, '../images/mrf-sprite.png', 'mrf_logo-m', );
+$mrf-logo-name: 'mrf_logo';
+$mrf-logo-x: 0px;
+$mrf-logo-y: 75px;
+$mrf-logo-offset-x: 0px;
+$mrf-logo-offset-y: -75px;
+$mrf-logo-width: 144px;
+$mrf-logo-height: 56px;
+$mrf-logo-total-width: 144px;
+$mrf-logo-total-height: 131px;
+$mrf-logo-image: '../images/mrf-sprite.png';
+$mrf-logo: (0px, 75px, 0px, -75px, 144px, 56px, 144px, 131px, '../images/mrf-sprite.png', 'mrf_logo', );
+$mrf-search-name: 'mrf_search';
+$mrf-search-x: 0px;
+$mrf-search-y: 11px;
+$mrf-search-offset-x: 0px;
+$mrf-search-offset-y: -11px;
+$mrf-search-width: 15px;
+$mrf-search-height: 16px;
+$mrf-search-total-width: 144px;
+$mrf-search-total-height: 131px;
+$mrf-search-image: '../images/mrf-sprite.png';
+$mrf-search: (0px, 11px, 0px, -11px, 15px, 16px, 144px, 131px, '../images/mrf-sprite.png', 'mrf_search', );
+$mrf-up-arrow-light-blue-name: 'mrf_up-arrow-light-blue';
+$mrf-up-arrow-light-blue-x: 0px;
+$mrf-up-arrow-light-blue-y: 0px;
+$mrf-up-arrow-light-blue-offset-x: 0px;
+$mrf-up-arrow-light-blue-offset-y: 0px;
+$mrf-up-arrow-light-blue-width: 9px;
+$mrf-up-arrow-light-blue-height: 5px;
+$mrf-up-arrow-light-blue-total-width: 144px;
+$mrf-up-arrow-light-blue-total-height: 131px;
+$mrf-up-arrow-light-blue-image: '../images/mrf-sprite.png';
+$mrf-up-arrow-light-blue: (0px, 0px, 0px, 0px, 9px, 5px, 144px, 131px, '../images/mrf-sprite.png', 'mrf_up-arrow-light-blue', );
+$spritesheet-width: 144px;
+$spritesheet-height: 131px;
+$spritesheet-image: '../images/mrf-sprite.png';
+$spritesheet-sprites: ($mrf-down-arrow, $mrf-logo-m, $mrf-logo, $mrf-search, $mrf-up-arrow-light-blue, );
+$spritesheet: (144px, 131px, '../images/mrf-sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

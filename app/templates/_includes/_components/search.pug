@@ -1,0 +1,10 @@
+form.search.js-search(action="", method="post" id="header-search")
+  .search__input
+    input.input.input-search(type="text",
+    id="site-search",
+    name="site-search",
+    placeholder="Поиск")
+  label(for="site-search").label.label-search-header.js-btn-toggle
+    span.icon.icon-search
+      svg(role="img"): use(xlink:href="#search")
+//END search

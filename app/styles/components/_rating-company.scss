@@ -1,0 +1,74 @@
+.rating-company {
+  @extend %list-items;
+
+  @media (max-width: 750px) {
+    text-align: left;
+    text-justify: none;
+    -ms-text-align-last: right;
+    text-align-last: left;
+  }
+
+  &::after {
+    @extend %list-items::after;
+
+    @media (max-width: 750px) {
+      display: none;
+    }
+  }
+
+  &__item {
+    @extend .clearfix;
+    @extend %list-items__item;
+    position: relative;
+    font-size: $font-size-base;
+    text-align: center;
+
+    @media (max-width: 750px) {
+      width: 100%;
+    }
+
+  }
+
+  &__value {
+    position: relative;
+    margin-bottom: 10px;
+    color: $first-color;
+    font-size: em(18px);
+    font-weight: $f-bold;
+    line-height: calc-em(24px, 18px);
+
+    @media (max-width: 750px) {
+      margin-bottom: 10px;
+      float: right;
+      width: percentage(59px/259px);
+    }
+
+    span {
+      @media (max-width: 750px) {
+        font-size: calc-em(16px, 18px);
+      }
+    }
+  }
+
+  &__prop {
+    color: $light-gray;
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: inherit;
+    line-height: em(18px);
+
+    @media (max-width: 750px) {
+      margin-bottom: 10px;
+      float: left;
+      width: percentage(159px/259px);
+      line-height: em(24px);
+    }
+
+    br {
+      @media (max-width: 750px) {
+        display: none;
+      }
+    }
+  }
+}
+//END.rating-company

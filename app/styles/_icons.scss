@@ -1,0 +1,107 @@
+@import 'variables';
+@import 'elma-sprite';
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?a1sqgx');
+  src:  url('../fonts/icomoon/icomoon.eot?a1sqgx#iefix') format('embedded-opentype'),
+  url('../fonts/icomoon/icomoon.ttf?a1sqgx') format('truetype'),
+  url('../fonts/icomoon/icomoon.woff?a1sqgx') format('woff'),
+  url('../fonts/icomoon/icomoon.svg?a1sqgx#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-down:before {
+  content: "\e900";
+}
+.icon-chevron-left:before {
+  content: "\e901";
+}
+.icon-chevron-right:before {
+  content: "\e902";
+}
+.icon-chevron-up:before {
+  content: "\e903";
+}
+.icon-chevrons-left:before {
+  content: "\e904";
+}
+.icon-chevrons-right:before {
+  content: "\e905";
+}
+.icon-list:before {
+  content: "\e906";
+}
+.icon-menu:before {
+  content: "\e907";
+}
+.icon-plus:before {
+  content: "\e908";
+}
+.icon-search:before {
+  content: "\e909";
+}
+
+.icon {
+
+  &-chevron-left--arrow-date,
+  &-list--view-calendar,
+  &-menu--view-calendar,
+  &-search--header,
+  &-search--add-event,
+  &-plus--add-event {
+    font-size: 25px;
+  }
+
+  &-list--view-calendar,
+  &-menu--view-calendar {
+    display: none;
+  }
+
+  &-chevron-left--arrow-date {
+    @include media-breakpoint-up(sm){
+      display: none;
+    }
+  }
+
+  &--search-input {
+    position: absolute;
+    color: #a9a9a9;
+    left: 58px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @at-root .search-bar input:focus + & {
+      display: none;
+    }
+  }
+  
+  &-plus--gray {
+    font-size: 19px;
+    color: #000;
+  }
+
+  &-plus--add-event {
+    @include media-breakpoint-up(md){
+      font-size: 18px;
+    }
+  }
+
+}
+

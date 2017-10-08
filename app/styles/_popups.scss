@@ -1,0 +1,58 @@
+.popup {
+  position: relative;
+  background: #fff;
+  font-size: $font-size-base;
+
+  &-requisites {
+    margin: 0 auto;
+    padding: 25px 0;
+    max-width: 696px;
+    width: 100%;
+
+    &__inner-nav {
+      @extend .last-reviews__inner-nav;
+    }
+  }
+
+
+  &-nav {
+    position: relative;
+    padding: 0 30px;
+    line-height: $font-size-base;
+    margin: 0 0 31px;
+    list-style-type: none;
+    border-bottom: 1px solid #c6d3eb;
+
+    @media (max-width: 750px){
+      padding: 0 16px;
+      margin-bottom: 20px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+    }
+
+    & li {
+      padding-bottom: 15px;
+      padding-right: 54px;
+      display: inline-block;
+      vertical-align: middle;
+      font-size: $font-size-base;
+
+      @media (max-width: 750px){
+        padding-right: 14px;
+        padding-bottom: 14px;
+      }
+    }
+
+    @at-root .link-popup-nav {
+      @extend .link-lastreviews-nav;
+
+      &.active {
+        @extend .link-lastreviews-nav.active;
+      }
+    }
+  }
+}
+
+//END .popup
+

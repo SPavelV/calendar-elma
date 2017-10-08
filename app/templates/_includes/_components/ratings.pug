@@ -1,0 +1,131 @@
+.ratings
+  .ratings__groupname Рейтинги
+
+  .ratings__body
+    .ratings__inner-nav
+      ul.ratings-nav.js-toggle-tabs
+        li
+          a.link-ratings-nav.active(href="#rating-bank") Рейтинг банков
+        li
+          a.link-ratings-nav(href="#rating-mfo") Рейтинг МФО
+        li
+          a.link-ratings-nav(href="#insurance") Рейтинг страховых компаний
+
+    .ratings__table-inner-tab.active#rating-bank
+      table.ratings-table
+        thead.ratings-tabel__thead
+          tr.ratings-table__tr
+            th.ratings-table__th.ratings-table__th--rait Место
+            th.ratings-table__th.ratings-table__th--place Банк
+            th.ratings-table__th.ratings-table__th--avarage-rating Средняя оценка
+            th.ratings-table__th.ratings-table__th--rating-qty Количество оценок
+        tbody.ratings-table__tbody
+          - for(var i = 0; i < 4; i++)
+            tr.ratings-table__tr
+              td.ratings-table__td.ratings-table__td--rait= i
+                i.icon.icon-rating-up
+                  svg(role="img"): use(xlink:href="#arrow-rating-up")
+              td.ratings-table__td.ratings-table__td--place  Тинькофф Банк
+              td.ratings-table__td.ratings-table__td--avarage-rating 3,56
+              td.ratings-table__td.ratings-table__td--rating-qty 66
+          - for(var j = 4; j < 8; j++)
+            tr.ratings-table__tr
+              td.ratings-table__td.ratings-table__td--rait= j
+                i.icon.icon-rating-down
+                  svg(role="img"): use(xlink:href="#arrow-rating-down")
+              td.ratings-table__td.ratings-table__td--place  Хоум Кредит энд Финанс Банк
+              td.ratings-table__td.ratings-table__td--avarage-rating 3,27
+              td.ratings-table__td.ratings-table__td--rating-qty 55
+          - for(var i = 8; i < 13; i++)
+            tr.ratings-table__tr
+              td.ratings-table__td.ratings-table__td--rait= i
+              td.ratings-table__td.ratings-table__td--place  Альфа-Банк
+              td.ratings-table__td.ratings-table__td--avarage-rating 3,08
+              td.ratings-table__td.ratings-table__td--rating-qty 57
+          - for(var j = 13; j < 14; j++)
+            tr.ratings-table__tr
+              td.ratings-table__td.ratings-table__td--rait= j
+              td.ratings-table__td.ratings-table__td--place  ВТБ 24
+              td.ratings-table__td.ratings-table__td--avarage-rating 3,07
+              td.ratings-table__td.ratings-table__td--rating-qty  54
+        //END .ratings-table
+      //END rating__table-inner
+
+
+
+    .ratings__table-inner-tab#rating-mfo
+      table.ratings-table
+        thead.ratings-tabel__thead
+          tr.ratings-table__tr
+            th.ratings-table__th.ratings-table__th--rait Место
+            th.ratings-table__th.ratings-table__th--place Банк
+            th.ratings-table__th.ratings-table__th--avarage-rating Средняя оценка
+            th.ratings-table__th.ratings-table__th--rating-qty Количество оценок
+        tbody.ratings-table__tbody
+          - for(var j = 4; j < 8; j++)
+          tr.ratings-table__tr
+            td.ratings-table__td.ratings-table__td--rait= j
+            i.icon.icon-rating-down
+              svg(role="img"): use(xlink:href="#arrow-rating-down")
+            td.ratings-table__td.ratings-table__td--place  Хоум Кредит энд Финанс Банк
+            td.ratings-table__td.ratings-table__td--avarage-rating 3,27
+            td.ratings-table__td.ratings-table__td--rating-qty 55
+          - for(var i = 8; i < 13; i++)
+          tr.ratings-table__tr
+            td.ratings-table__td.ratings-table__td--rait= i
+            td.ratings-table__td.ratings-table__td--place  Альфа-Банк
+            td.ratings-table__td.ratings-table__td--avarage-rating 3,08
+            td.ratings-table__td.ratings-table__td--rating-qty 57
+          - for(var j = 13; j < 14; j++)
+          tr.ratings-table__tr
+            td.ratings-table__td.ratings-table__td--rait= j
+            td.ratings-table__td.ratings-table__td--place  ВТБ 24
+            td.ratings-table__td.ratings-table__td--avarage-rating 3,07
+            td.ratings-table__td.ratings-table__td--rating-qty  54
+        //END .ratings-table
+      //END rating__table-inner
+
+    .ratings__table-inner-tab#insurance
+      table.ratings-table
+        thead.ratings-tabel__thead
+          tr.ratings-table__tr
+            th.ratings-table__th.ratings-table__th--rait Место
+            th.ratings-table__th.ratings-table__th--place Банк
+            th.ratings-table__th.ratings-table__th--avarage-rating Средняя оценка
+            th.ratings-table__th.ratings-table__th--rating-qty Количество оценок
+        tbody.ratings-table__tbody
+          - for(var i = 0; i < 4; i++)
+          tr.ratings-table__tr
+            td.ratings-table__td.ratings-table__td--rait= i
+            i.icon.icon-rating-up
+              svg(role="img"): use(xlink:href="#arrow-rating-up")
+            td.ratings-table__td.ratings-table__td--place  Тинькофф Банк
+            td.ratings-table__td.ratings-table__td--avarage-rating 3,56
+            td.ratings-table__td.ratings-table__td--rating-qty 66
+          - for(var j = 4; j < 8; j++)
+          tr.ratings-table__tr
+            td.ratings-table__td.ratings-table__td--rait= j
+            i.icon.icon-rating-down
+              svg(role="img"): use(xlink:href="#arrow-rating-down")
+            td.ratings-table__td.ratings-table__td--place  Хоум Кредит энд Финанс Банк
+            td.ratings-table__td.ratings-table__td--avarage-rating 3,27
+            td.ratings-table__td.ratings-table__td--rating-qty 55
+          - for(var i = 8; i < 13; i++)
+          tr.ratings-table__tr
+            td.ratings-table__td.ratings-table__td--rait= i
+            td.ratings-table__td.ratings-table__td--place  Альфа-Банк
+            td.ratings-table__td.ratings-table__td--avarage-rating 3,08
+            td.ratings-table__td.ratings-table__td--rating-qty 57
+        //END .ratings-table
+      //END rating__table-inner
+
+
+
+    .ratings__inner-btn-all
+       a.btn.btn--middle-165px-40px.btn--white-lblue(href="") Полный рейтинг
+
+    //END .ratings-nav
+
+  //END .ratings__body
+
+//END.ratings

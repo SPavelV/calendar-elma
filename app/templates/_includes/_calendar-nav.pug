@@ -1,0 +1,54 @@
+.calendar__nav
+
+  .calendar__date-nav
+    .date
+      button.btn.btn--arrow-date
+        i.icon-chevron-left.icon-chevron-left--arrow-date
+        span.date__month.date__month--nav Май&nbsp;
+        span.date__year.date__year--nav 2017
+  //END.calendar__date
+
+  .calendar__selection
+    form.select-calendar(action)
+      select.select.select--calendar
+        option Календарь 1
+        option Календарь 2
+        option Календарь 3
+        option Календарь 4
+      //span.select-calendar__add
+      //  button.btn.btn
+      //    i.icon-plus.icon-plus--gray
+  //END.calendar__selection
+
+  .calendar__view-switching
+    .view-switching.view-switching--desktop
+      button.btn.btn--first.btn--view-switching День
+      button.btn.btn--first.btn--view-switching Неделя
+      button.btn.btn--first.btn--view-switching.active Месяц
+      button.btn.btn--first.btn--view-switching Год
+
+    .view-switching
+      button.btn.btn--switching-view
+        i.icon-list.icon-list--view-calendar.show
+        i.icon-menu.icon-menu--view-calendar
+  //END.calendar__view-switching
+
+  .calendar__search
+    button.btn.btn--search-mobile
+      i.icon-search.icon-search--header
+    .calendar__search-bar
+      .search-bar
+        form(action)
+          input(type=search, placeholder="Поиск")
+          i.icon.icon-search.icon--search-input
+          //button.btn(type="submit") Найти
+    //END.calendar__search-bar
+  //END.calendar__search
+
+  .calendar__add-event
+    .add-event
+      button.btn.btn--add-event
+        i.icon-plus.icon-plus--add-event
+  //END.calendar__add-event
+
+//END .calendar__nav

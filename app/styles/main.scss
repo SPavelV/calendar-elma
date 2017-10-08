@@ -1,0 +1,730 @@
+//@import "libs/bootstrap/scss/bootstrap";
+@import "libs/bootstrap/scss/bootstrap-grid";
+@import "libs/bootstrap/scss/mixins";
+@import "libs/bootstrap/scss/reboot";
+@import "libs/bootstrap/scss/type";
+@import "libs/bootstrap/scss/utilities";
+@import "variables";
+//@import "mixins";
+@import "icons";
+@import "buttons";
+
+.show {
+  display: block;
+}
+
+.calendar {
+  display: flex;
+  flex-flow: column wrap;
+
+  &-section--nav,
+  &-section--nav-footer {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid $gray-400;
+    box-shadow: 0 3px 1px rgba(248, 248, 248, .7);
+  }
+
+  &-section--nav-footer {
+    border-top: 1px solid $gray-300;
+  }
+  
+  
+
+  &__nav {
+    @extend .container;
+    flex: 1 1 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 10px 9px 10px;
+
+  }
+
+  &__date-table {
+    flex: 1 1;
+  }
+
+  &__date-nav {
+    flex: 0 1 100px;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+
+  }
+
+  @at-root .date {
+    font-size: 18px;
+    line-height: 30px;
+    color: $red;
+
+    @include media-breakpoint-up(sm) {
+      color: #000;
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: 25px;
+    }
+
+    &__prop--table,
+    &__year--table,
+    &__month--nav {
+      display: none;
+
+      @include media-breakpoint-up(md) {
+        display: block;
+      }
+    }
+
+    &__month--nav {
+      @include media-breakpoint-up(sm) {
+        display: block;
+        font-weight: 500;
+      }
+    }
+
+    &--table {
+      text-transform: uppercase;
+
+      @include media-breakpoint-up(md) {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        font-weight: 300;
+        text-transform: none;
+      }
+    }
+
+    &__month--table,
+    &__prop--table {
+      @include media-breakpoint-up(md) {
+        font-weight: 400;
+      }
+    }
+
+  }
+
+  &__selection {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      order: -2;
+      flex: 0 1 125px;
+      display: block;
+    }
+  }
+
+  @at-root .select-calendar {
+    width: 100%;
+    display: flex;
+
+    @at-root .select--calendar {
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid $gray-300;
+      margin-right: 10px;
+    }
+  }
+
+  &__view-switching {
+    flex: 1 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-right: 20px;
+    color: $red;
+
+    @include media-breakpoint-up(sm) {
+      justify-content: center;
+      margin-right: 0;
+    }
+
+    @include media-breakpoint-up(md) {
+      color: #000;
+    }
+  }
+
+  @at-root .view-switching {
+    @include media-breakpoint-up(sm) {
+      display: none;
+    }
+
+    &--desktop {
+      display: none;
+
+      @include media-breakpoint-up(sm) {
+        flex: 0 1 auto;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid $red;
+        border-radius: 5px;
+        font-size: 13px;
+      }
+
+      @include media-breakpoint-up(md) {
+        color: #000;
+        border: 1px solid $gray-300;
+        background: #fff;
+      }
+    }
+  }
+
+  &__search {
+    flex: 0 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-right: 20px;
+
+    @include media-breakpoint-up(md) {
+      flex-basis: 200px;
+      margin-right: 0;
+    }
+  }
+
+  &__search-bar {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  @at-root .search-bar {
+    form {
+      position: relative;
+    }
+
+    input {
+      width: 100%;
+      border-radius: 5px;
+      padding: 2px 10px 3px;
+      text-align: center;
+      border: 1px solid $gray-300;
+      font-size: 13px;
+    }
+  }
+
+  &__add-event {
+    flex: 0 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    @include media-breakpoint-up(md) {
+      order: -2;
+    }
+  }
+
+  &__week {
+    @extend .container;
+    flex: 1 1 100%;
+    padding: 0 0 4px;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+
+  @at-root .table-week {
+    width: 100%;
+
+    &__th {
+      width: 14%;
+      padding: 5px 10px 0;
+      font-weight: bold;
+      text-align: center;
+      vertical-align: top;
+      font-size: 10px;
+
+      &:nth-child(6) {
+        color: $gray-600;
+      }
+
+      &:nth-child(7) {
+        color: $gray-600;
+      }
+    }
+
+    &__td {
+      width: 14%;
+      padding: 8px 10px 0;
+      text-align: center;
+    }
+
+    &__descr-day {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      width: 100%;
+
+      @at-root .table-week__td:nth-child(6) & {
+        color: $gray-600;
+      }
+
+      @at-root .table-week__td:nth-child(7) & {
+        color: $gray-600;
+      }
+
+
+    }
+
+    &__td-tfoot {
+      text-align: center;
+      padding: 0 10px 5px;
+    }
+
+    &__date-number {
+      &.active {
+        width: 30px;
+        height: 30px;
+        background-color: $red;
+        border-radius: 50%;
+        color: #fff;
+        line-height: 30px
+      }
+    }
+  }
+
+  &__today {
+    @extend .container;
+    flex: 1 1 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 20px;
+
+    @include media-breakpoint-up(md) {
+      padding-bottom: 10px;
+    }
+  }
+
+  &__pagination {
+    flex: 0 1;
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+
+  @at-root .pagination-date {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @at-root .pagination-date__descr {
+    padding: 0 5px 2px;
+    border: 1px solid $gray-300;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+
+  &__table {
+    @extend .container;
+    flex: 1 1 100%;
+    padding: 0 0 10px;
+    border-bottom: 1px solid $gray-300;
+    box-shadow: 0 3px 1px rgba(248, 248, 248, .5);
+
+    @include media-breakpoint-up(md) {
+      padding: 0;
+      border-bottom: 0;
+      box-shadow: none;
+    }
+  }
+
+  @at-root .table-cal {
+    width: 100%;
+    font-size: 13px;
+    table-layout: fixed;
+
+    @include media-breakpoint-up(md) {
+      font-size: 14px;
+      height: calc(100vh - 125px);
+    }
+
+    &__th {
+      display: none;
+
+      @include media-breakpoint-up(md) {
+        display: table-cell;
+        width: 14%;
+        padding: 5px 10px;
+        font-weight: normal;
+        font-size: 13px;
+        text-align: right;
+        border-bottom: 1px solid $gray-300;
+        text-transform: uppercase;
+      }
+    }
+
+    &__td {
+      height: 60px;
+      width: 14%;
+      padding: 8px 10px 12px;
+      text-align: center;
+      vertical-align: top;
+      border-top: 1px solid $gray-200;
+
+      &:nth-child(6),
+      &:nth-child(7) {
+        @include media-breakpoint-up(md) {
+          background-color: $gray-100;
+        }
+      }
+
+      @include media-breakpoint-up(md) {
+        height: 100px;
+        padding: 0;
+        border: 1px solid $gray-200;
+      }
+    }
+
+    &__descr-day {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      width: 100%;
+
+      @include media-breakpoint-up(md) {
+        align-items: flex-start;
+      }
+
+    }
+
+    &__date-number {
+
+      @include media-breakpoint-up(md) {
+        flex: 0 1;
+        padding: 2px 5px 3px;
+        margin-top: 5px;
+        margin-right: 5px;
+        text-align: right;
+        align-self: flex-end;
+        cursor: pointer;
+      }
+
+      @at-root .table-cal__td:nth-child(6) & {
+        color: $gray-600;
+      }
+
+      @at-root .table-cal__td:nth-child(6) &.active {
+        color: #fff;
+      }
+
+      @at-root .table-cal__td:nth-child(7) & {
+        color: $gray-600;
+      }
+
+      @at-root .table-cal__td:nth-child(7) &.active {
+        color: #fff;
+      }
+
+      &.active {
+        display: inline-block;
+        vertical-align: middle;
+        min-width: 30px;
+        height: 30px;
+        margin-bottom: 5px;
+        background-color: $red;
+        border-radius: 15px;
+        color: #fff;
+        line-height: 30px;
+        text-align: center;
+
+        @include media-breakpoint-up(md) {
+          min-width: 25px;
+          height: 25px;
+          line-height: 20px;
+        }
+      }
+
+      span {
+        display: none;
+
+        @include media-breakpoint-up(md) {
+          display: inline;
+        }
+      }
+    }
+
+    &__events {
+
+      @include media-breakpoint-up(md) {
+        width: 100%;
+        text-align: left;
+      }
+
+      &::before {
+        display: inline-block;
+        vertical-align: middle;
+        content: '';
+        width: 7px;
+        height: 7px;
+        background-color: $gray-400;
+        border-radius: 50%;
+
+        @include media-breakpoint-up(md) {
+          display: none;
+        }
+      }
+    }
+
+    &__event {
+      display: none;
+
+      @include media-breakpoint-up(md) {
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 5px;
+        background-color: $orange;
+        cursor: pointer;
+      }
+
+      &--holiday {
+        background-color: $pink;
+      }
+    }
+
+    &__title {
+      flex: 0 1;
+      flex-basis: calc(100% - 30px);
+      font-size: 11px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: left;
+
+      &--holiday {
+        flex: 1 1;
+        flex-basis: 100%;
+      }
+    }
+
+    &__time {
+      font-size: 11px;
+
+      &.day-off {
+        color: #000;
+      }
+    }
+  }
+
+  &__next-month {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+
+  }
+
+  @at-root .next-month {
+    flex: 0 1 60%;
+    padding: 0 0 5px;
+    border-bottom: 1px solid $gray-300;
+    text-transform: uppercase;
+  }
+
+  &__nav-footer {
+    @extend .container;
+    flex: 1 1 100%;
+    padding: 10px;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+
+  }
+
+  @at-root .nav-second {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    &__link {
+      color: $red;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $red;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__list-events {
+    @extend .container;
+    padding: 10px 0 0 10px;
+    flex: 1 1 100%;
+
+  }
+
+  @at-root .list-events {
+    flex:  1 1 100%;
+    display: flex;
+    flex-flow: column wrap;
+
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+    &__item {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 2px 10px 2px 5px;
+
+      & + & {
+        border-top: 1px solid $gray-300;
+      }
+    }
+
+    &__time {
+      flex: 0 1 43px;
+      font-size: 12px;
+      line-height: 24px;
+      border-right-width: 3px;
+      border-right-style: solid ;
+      border-right-color: $green;
+
+      @at-root .important & {
+        border-right-color: $red;
+      }
+
+      @at-root .current & {
+        border-right-color: $blue;
+      }
+    }
+
+    &__end {
+      color: $gray-500;
+    }
+
+    &__descr {
+      padding-left: 10px;
+    }
+  }
+
+  @at-root .calendar-section--day-timing {
+    overflow-y: auto;
+  }
+
+  &__day-timing {
+    @extend .container;
+    padding: 30px 0 0 25px;
+    height: calc(100vh - 161px - 45px);
+
+    @include media-breakpoint-up(sm) {
+      height: auto;
+    }
+  }
+
+  @at-root .day-timing {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+
+    &__item {
+      flex: 1 1 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    &__lable {
+      position: relative;
+      flex: 0 1 35px;
+      font-size: 12px;
+      color: $gray-600;
+
+      @include media-breakpoint-up(sm) {
+        flex: 0 1 40px;
+        font-size: 14px;
+      }
+
+      span {
+        position: relative;
+        top: -10px;
+      }
+    }
+
+    &__events-list {
+      flex: 1 1;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-items: center;
+      min-height: 45px;
+      padding: 2px 0 6px;
+
+      @include media-breakpoint-up(sm) {
+        min-height: 52px;
+        padding: 5px 0 6px;
+
+      }
+
+      @at-root .day-timing__item + .day-timing__item & {
+        border-top: 1px solid $gray-300;
+      }
+
+      @at-root .day-timing__item:first-of-type & {
+        border-top: 1px solid $gray-300;
+      }
+    }
+
+    &__event {
+      position: relative;
+      flex: 1 1 100%;
+      font-size: 13px;
+      line-height: 19px;
+
+      @include media-breakpoint-up(sm) {
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+
+    &__time {
+      position: absolute;
+      left: -33px;
+      top: 1px;
+      font-size: 11px;
+      line-height: 19px;
+
+      @include media-breakpoint-up(sm) {
+        left: -38px;
+        font-size: 13px;
+        line-height: 20px;
+      }
+    }
+  }
+
+
+}

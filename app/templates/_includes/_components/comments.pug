@@ -1,0 +1,276 @@
+.comments
+  .comments__qty
+    | Комментарии (6)
+  .comments__add-comment
+    .comments__avatar-inner
+      .comments__avatar.comments__avatar--input.visible-pc-blocks
+    .comments__hint.visible-mobile-block
+      | Чтобы оставить отзыв&nbsp;
+      br
+      a(href="") авторизуйтесь
+    form.comments__form(method="post" action="")
+
+      .comments__input
+        textarea(name="comment", placeholder="Оставьте свой комментарий...")
+
+      .comments__info
+        .comments__hint.visible-pc-block
+          | Чтобы оставить отзыв&nbsp;
+          a(href="") авторизуйтесь
+
+        .comments__inner-submit
+          button.btn.btn--158px-40px.btn--green(type="submit") Комментировать
+
+      //END.comments__info
+    //END.comments__form
+  //END.comments__add-comment
+
+  .comments__item.comments__item--border-left
+    .comments__info-message
+      .comments__avatar.comments__avatar--message
+        img(src="images/commentator2.jpg")
+      .comments__inner-status
+        span.comments__user-name kolvera
+        span.comments__status
+          span.comments__author.color-pink Автор статьи
+        span.comments__date 01.04.2017 14:01
+      //END.comments__inner-status
+    //END.comments__info-message
+    .comments__descr
+      .comments__message
+        | После звонка на горячую линию моё обращение
+        | было зарегистрировано банком и рассмотрено.
+        | На следующий день пришло сообщение от банка,
+        | что мое обращение рассмотрено и некорректного
+        | консультирования сотрудниками банка выявлено
+        | не было. Якобы мной было выражено согласие на
+        | подключение услуги и по телефону единого
+        | информационного центра банка и, таким образом,
+        | банк не видит оснований для возврата
+        | денег на мой счет. (Я не понимаю каким
+        | образом банк расценивает то,
+        | что я дала согласие. Если бы они
+        | прослушали запись нашего разговора с
+        | оператором, то, думаю, там не звучало
+        | никаких моих положительных ответов.)
+      //END.comments__message
+      .comments__service
+        .comments__link-answer
+          a(href="") Ответить
+        .comments__likes
+          .likes
+            button.likes__good
+              span.icon-like
+                svg(role="img"): use(xlink:href="#like")
+              span.likes__qty.likes__qty--good 2
+            button.likes__bad
+              span.icon-like
+                svg(role="img"): use(xlink:href="#dislike")
+              span.likes__qty.likes__qty--bad 0
+          //END.likes
+      //END .comments__info
+    //END.comments__descr
+
+    .comments__sub-item.comments__sub-item--level1
+      .comments__item
+        .comments__info-message.comments__avatar--message
+          .comments__avatar
+            //img(src="images/commentator2.jpg")
+          .comments__inner-status
+            span.comments__user-name Ирина Соколова
+            span.comments__status
+              span.icon.icon-redo-arrow
+                svg(role="img"): use(xlink:href="#redo-arrow")
+              span.comments__for-user kolvera
+            span.comments__date 31.03.2017 19:38
+          //END.comments__inner-status
+        //END.comments__info-message
+        .comments__descr
+          .comments__message
+            | После звонка на горячую линию моё обращение
+            | было зарегистрировано банком и рассмотрено.
+            | На следующий день пришло сообщение от банка,
+            | что мое обращение рассмотрено и некорректного
+            | консультирования сотрудниками банка выявлено
+            | не было. Якобы мной было выражено согласие на
+            | подключение услуги и по телефону единого
+            | информационного центра банка и, таким образом,
+            | банк не видит оснований для возврата
+            | денег на мой счет. (Я не понимаю каким
+            | образом банк расценивает то,
+            | что я дала согласие. Если бы они
+            | прослушали запись нашего разговора с
+            | оператором, то, думаю, там не звучало
+            | никаких моих положительных ответов.)
+          //END.comments__message
+          .comments__service
+            .comments__link-answer
+              a(href="") Ответить
+            .comments__likes
+              .likes
+                button.likes__good
+                  span.icon-like
+                    svg(role="img"): use(xlink:href="#like")
+                  span.likes__qty.likes__qty--good 0
+                button.likes__bad
+                  span.icon-like
+                    svg(role="img"): use(xlink:href="#dislike")
+                  span.likes__qty.likes__qty--bad 1
+              //END.likes
+          //END .comments__info
+        //END.comments__descr
+
+        .comments__sub-item.comments__sub-item--level2
+          .comments__item
+            .comments__info-message
+              .comments__avatar.comments__avatar--message
+                img(src="images/commentator-cnt1.jpg")
+              .comments__inner-status
+                span.comments__user-name VladTE
+                span.comments__status
+                  span.icon.icon-redo-arrow
+                    svg(role="img"): use(xlink:href="#redo-arrow")
+                  span.comments__for-user Ирина Соколова
+                span.comments__date 15 минут назад
+              //END.comments__inner-status
+            //END.comments__info-message
+            .comments__descr
+              .comments__message
+                | После звонка на горячую линию моё обращение
+                | было зарегистрировано банком и рассмотрено. На следующий день
+              //END.comments__message
+              .comments__service
+                .comments__link-answer
+                  a(href="") Ответить
+                .comments__likes
+                  //.likes
+                  //  button.likes__good
+                  //    span.icon-like
+                  //      svg(role="img"): use(xlink:href="#like")
+                  //    span.likes__qty.likes__qty--good 0
+                  //  button.likes__bad
+                  //    span.icon-like
+                  //      svg(role="img"): use(xlink:href="#dislike")
+                  //    span.likes__qty.likes__qty--bad 1
+                  //END.likes
+              //END .comments__info
+            //END.comments__descr
+        //END.comments__sub-item.comments__sub-item--level2
+    //END.comments__sub-item.comments__sub-item--level1
+
+  //END .comments__item
+
+  .comments__item
+    .comments__info-message
+      .comments__avatar.comments__avatar--message
+        img(src="images/commentator3.jpg")
+      .comments__inner-status
+        span.comments__user-name Екатерина
+        span.comments__status
+          span.comments__author.color-lblue Администратор
+        span.comments__date 01.04.2017 14:01
+      //END.comments__inner-status
+    //END.comments__info-message
+    .comments__descr
+      .comments__message
+        | После звонка на горячую линию моё обращение
+        | было зарегистрировано банком и рассмотрено.
+        | На следующий день пришло сообщение от банка, что мое обращение
+      //END.comments__message
+      .comments__service
+        .comments__link-answer
+          a(href="") Ответить
+        .comments__likes
+          //.likes
+          //  button.likes__good
+          //    span.icon-like
+          //      svg(role="img"): use(xlink:href="#like")
+          //    span.likes__qty.likes__qty--good 2
+          //  button.likes__bad
+          //    span.icon-like
+          //      svg(role="img"): use(xlink:href="#dislike")
+          //    span.likes__qty.likes__qty--bad 0
+          //END.likes
+      //END .comments__info
+    //END.comments__descr
+  //END.comments__item
+
+  .comments__item
+    .comments__info-message
+      .comments__avatar.comments__avatar--message
+        //img(src="images/commentator3.jpg")
+      .comments__inner-status
+        span.comments__user-name Дмитрий Волков
+        //span.comments__status
+        //  span.comments__author.color-lblue Администратор
+        span.comments__date 01.04.2017 14:01
+      //END.comments__inner-status
+    //END.comments__info-message
+    .comments__descr
+      .comments__message
+        |После звонка на горячую линию моё обращение
+        |было зарегистрировано банком и рассмотрено.
+        |На следующий день пришло сообщение от банка, что мое обращение
+
+      //END.comments__message
+      .comments__service
+        .comments__link-answer
+          a(href="") Ответить
+        .comments__likes
+          .likes
+            button.likes__good
+              span.icon-like
+                svg(role="img"): use(xlink:href="#like")
+              span.likes__qty.likes__qty--good 0
+            button.likes__bad
+              span.icon-like
+                svg(role="img"): use(xlink:href="#dislike")
+              span.likes__qty.likes__qty--bad 0
+          END.likes
+      //END .comments__info
+    //END.comments__descr
+  //END.comments__item
+
+  .comments__item
+    .comments__info-message
+      .comments__avatar.comments__avatar--message
+        img(src="images/commentator4.jpg")
+      .comments__inner-status
+        span.comments__user-name Иван Зыков
+        span.comments__status
+          span.comments__author.color-lgreen Представитель банка
+        span.comments__date 01.04.2017 14:01
+      //END.comments__inner-status
+    //END.comments__info-message
+    .comments__descr
+      .comments__message
+        |После звонка на горячую линию моё обращение
+        |было зарегистрировано банком и рассмотрено.
+        |На следующий день пришло сообщение от банка, что мое обращение
+
+      //END.comments__message
+      .comments__service
+        .comments__link-answer
+          a(href="") Ответить
+          //.comments__likes
+          //  .likes
+          //    button.likes__good
+          //      span.icon-like
+          //        svg(role="img"): use(xlink:href="#like")
+          //      span.likes__qty.likes__qty--good 0
+          //    button.likes__bad
+          //      span.icon-like
+          //        svg(role="img"): use(xlink:href="#dislike")
+          //      span.likes__qty.likes__qty--bad 0
+          //END.likes
+      //END .comments__info
+    //END.comments__descr
+  //END.comments__item
+
+
+
+
+
+
+
+//END.comments

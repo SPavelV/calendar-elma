@@ -1,0 +1,244 @@
+.footer {
+  @extend .container;
+  padding: 85px 15px 75px 57px;
+
+  @media (max-width: 750px) {
+    padding: 35px 30px 33px 25px;
+  }
+
+  &__inner-mobile {
+    @extend .clearfix;
+    float: left;
+    width: percentage(903/1098);
+
+    @media (max-width: 991px) {
+      width: percentage(360/720);
+    }
+
+    @media (max-width: 750px) {
+      width: 100%;
+    }
+
+  }
+
+  &__about-company {
+    padding-right: 15px;
+    float: left;
+    width: percentage(318/903);
+    //- width: percentage(318/1098);
+
+    @media (max-width: 991px) {
+      width: 100%;
+    }
+
+    @media (max-width: 750px) {
+      padding-right: 0;
+    }
+  }
+
+  &__groupname {
+    margin-bottom: 0;
+    color: white;
+    font-weight: $f-bold;
+    font-size: 1em;
+    line-height: em(32px);
+    text-transform: uppercase;
+
+    @media (max-width: 991px) {
+      margin-bottom: 6px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 750px) {
+
+    }
+
+    @at-root .footer__contacts--visible-tablet .footer__groupname {
+      margin-bottom: 0;
+    }
+
+    @at-root .footer__contacts .footer__groupname {
+      @media (max-width: 750px) {
+        margin-bottom: 2px;
+      }
+    }
+
+    @at-root .footer-social .footer__groupname {
+      @media (max-width: 750px) {
+        margin-bottom: 1px;
+      }
+    }
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    color: #c6d3eb;
+    font-weight: inherit;
+    line-height: em(27px);
+
+    @media (max-width: 991px) {
+      display: none;
+    }
+
+    &--visible-tablet {
+      @media (max-width: 991px) {
+        display: block;
+      }
+    }
+
+    @at-root .link--footer-list {
+      color: #c6d3eb;
+      &:hover,
+      &:active,
+      &:focus {
+        color: #fff;
+      }
+    }
+
+    @at-root .link--margin-b3px {
+      margin-bottom: 3px;
+    }
+  }
+
+  &__banks {
+    float: left;
+    width: percentage(293/903);
+    //- width: percentage(293/1098);
+    padding-right: 15px;
+
+    @media (max-width: 991px) {
+      width: 100%;
+    }
+
+    @media (max-width: 750px) {
+      padding-right: 0;
+    }
+  }
+
+  &__hypothec {
+    margin-bottom: 28px;
+
+    @media (max-width: 750px) {
+      padding-right: 0;
+      margin-bottom: 18px;
+    }
+  }
+
+  &__text-span {
+    color: #fafafd;
+    font-family: inherit;
+    font-size: em(12px);
+    font-weight: inherit;
+    line-height: em(28px);
+
+    @media (max-width: 991px) {
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: -10px;
+    }
+  }
+
+  &__inner-section {
+    float: left;
+    width: percentage(292/903);
+    //- width: percentage(292/1098);
+    padding-right: 43px;
+
+
+    @media (max-width: 991px) {
+      width: 100%;
+      padding-right: 15px;
+    }
+
+    @media (max-width: 750px) {
+      padding-right: 0;
+    }
+
+    &--last {
+      width: percentage(195/1098);
+      padding-right: 0;
+
+      @media (max-width: 991px) {
+        width: percentage(312/720);
+      }
+
+      @media (max-width: 750px) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__contacts {
+    display: block;
+
+    @media (max-width: 991px) {
+      display: none;
+    }
+
+    @media (max-width: 750px) {
+      display: block;
+      margin-bottom: 21px;
+    }
+
+    &--visible-tablet {
+      display: none;
+
+      @media (max-width: 991px) {
+        display: block;
+        margin-bottom: 29px;
+      }
+
+      @media (max-width: 750px) {
+        display: none;
+      }
+    }
+  }
+
+  &__social {
+    margin-bottom: 50px;
+
+    @media (max-width: 991px) {
+      display: none;
+    }
+
+    @media (max-width: 750px) {
+      display: block;
+      margin-bottom: 29px;
+    }
+
+    &--visible-tablet {
+      display: none;
+
+      @media (max-width: 991px) {
+        display: block;
+      }
+
+      @media (max-width: 750px) {
+        display: none;
+      }
+    }
+  }
+
+  &__copyright {
+
+  }
+
+  &__text {
+    font-family: inherit;
+    font-size: em(12px);
+    font-weight: inherit;
+    color: #fff;
+  }
+
+  @at-root .link-footer-text {
+    color: #c6d3eb;
+
+    &:hover {
+      color: #bec9e1;
+    }
+  }
+
+}
+

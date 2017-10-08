@@ -1,0 +1,24 @@
+// popup-callback
+section.popup.mfp-hide#popup-callback
+  .popup__content
+    h3 Заказ звонка
+    form(action="",
+         method="")
+      fieldset
+        .popup__field
+          label.label.label-popup(for="name") Ваше имя и фамилия*
+          input.input.input-popup(type="text",name="name", id="name", placeholder="Иванов Иван")
+        .popup__field
+          label.label.label-popup(for="phone") Номер телефона*
+          input.input.input-popup(type="tel",name="phone",id="phone")
+        .popup__field
+          .captcha
+            .captcha__img
+              img(src="images/captcha.jpg")
+            .captcha__input
+              label.label.label-popup(for="captcha") Введите код с картинки
+              input.input.input-popup(type="text", name="captcha",value="",id="captcha")
+        .popup__field
+          input(type='submit' value="Заказать звонок").btn.btn-submit
+
+// END popup-callback

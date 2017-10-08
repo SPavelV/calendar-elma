@@ -1,0 +1,64 @@
+.likes {
+  width: 100%;
+
+  &__good,
+  &__bad {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 19px;
+    font-size: $font-size-base;
+
+    @at-root .likes__bad {
+      margin-right: 0;
+    }
+
+    @at-root .icon-like {
+      display: inline-block;
+      vertical-align: middle;
+      width: 20px;
+      height: 20px;
+      margin-right: 13px;
+      line-height: 1px;
+
+      svg {
+        fill: #636363;
+      }
+
+      @at-root .likes__good:hover svg {
+        fill: $green;
+      }
+    }
+
+    @at-root .icon-dislike {
+      @extend .icon-like;
+
+      svg {
+        fill: #636363;
+      }
+
+      @at-root .likes__bad:hover svg {
+        fill: #df5f5f;
+      }
+    }
+  }
+
+  &__qty {
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 13px;
+
+    @at-root .likes__good:hover .likes__qty--good {
+      color: $green;
+    }
+
+    @at-root .likes__bad:hover .likes__qty--bad {
+      color: #df5f5f;
+    }
+  }
+
+  &__sub-item {
+
+  }
+}

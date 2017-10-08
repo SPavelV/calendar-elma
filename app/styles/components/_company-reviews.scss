@@ -1,0 +1,166 @@
+.company-reviews {
+  margin-bottom: 74px;
+
+  @media(max-width: 750px) {
+    margin-bottom: 30px;
+  }
+
+  &__groupname {
+    @extend .last-reviews__groupname;
+
+    @media(max-width: 750px) {
+      margin-bottom: 17px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 17px;
+    padding: 30px 0;
+    background-color: white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.22);
+    @extend .clearfix;
+
+
+    @media(max-width: 750px) {
+      padding: 27px 0;
+    }
+  }
+
+  &__img {
+    float: left;
+    padding-left: 42px;
+    width: percentage(154/800);
+
+    @media(max-width: 750px) {
+      width: 100%;
+      padding: 0 16px;
+      margin-bottom: 28px;
+    }
+  }
+
+  &__location {
+    color: #636363;
+    font-family: inherit;
+    font-size: em(12px);
+    font-weight: inherit;
+    line-height: calc-em(18px, 12px);
+
+    @media(max-width: 750px) {
+      margin-bottom: 3px;
+    }
+  }
+
+  &__logo {
+    width: 90px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__descr {
+    float: right;
+    width: percentage(646/800);
+
+    @media(max-width: 750px) {
+      width: 100%;
+    }
+  }
+
+  &__header {
+    @extend .clearfix;
+    width: 100%;
+    margin-bottom: 12px;
+    padding-right: 45px;
+    padding-left: 10px;
+
+    @media(max-width: 750px) {
+      padding: 0 16px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    float: left;
+    color: $dark-blue;
+    font-family: inherit;
+    font-size: em(16px);
+    font-weight: $f-bold;
+    line-height: calc-em(20px,16px);
+
+    @media(max-width: 750px) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__stars-rating {
+    float: right;
+    width: 85px;
+    font-size: 0;
+
+    @media(max-width: 750px) {
+      float: left;
+      width: 100%;
+    }
+  }
+
+  &__text {
+    padding: 0 45px 12px 10px;
+    margin-bottom: 27px;
+    border-bottom: 1px solid #e5e9f2;;
+    color: $dark-blue;
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: inherit;
+    line-height: inherit;
+
+    @media(max-width: 750px) {
+      margin-bottom: 17px;
+    }
+  }
+
+  &__info {
+    @extend .clearfix;
+    font-size: 0;
+    padding-left: 18px;
+    padding-right: 45px;
+
+
+    @media(max-width: 750px) {
+      padding: 0 16px;
+    }
+  }
+
+  &__date {
+    @extend .news-navigator__date;
+
+    @media(max-width: 750px) {
+      margin-right: 32px;
+    }
+  }
+
+  &__comments-link {
+    @extend .news-navigator__comments-link;
+  }
+
+  &__qty-comments {
+    @extend .news-navigator__qty-comments;
+  }
+
+  &__likes {
+    float: right;
+    min-width: 112px;
+
+    @media(max-width: 750px) {
+      display: none;
+    }
+  }
+
+  &__inner-btn-all {
+    width: 100%;
+    margin-top: 2px;
+    text-align: center;
+  }
+}
+//END .company-reviews

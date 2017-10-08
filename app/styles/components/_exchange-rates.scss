@@ -1,0 +1,65 @@
+.exchange-rates {
+  background-color: white;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.22);
+  padding: 27px 20px 34px;
+  margin-bottom: 29px;
+
+  &__groupname {
+    margin-bottom: 35px;
+    color: $first-color;
+    font-family: inherit;
+    font-size: em(16px);
+    font-weight: $f-bold;
+    line-height: calc-em(24px, 16px);
+  }
+
+  &__table {
+    width: 100%;
+    margin-bottom: 13px;
+  }
+
+  &__th {
+    @extend .ratings-table__th;
+    padding-bottom: 18px;
+
+    @at-root .exchange-rates__th--place {
+      width: percentage(127/260);
+      text-align: left;
+    }
+
+    @at-root .exchange-rates__th--buy {
+      width: percentage(83/260);
+      text-align: left;
+    }
+
+    @at-root .exchange-rates__th--sale {
+      width: percentage(55/260);
+    }
+  }
+
+  &__td {
+    color: $first-color;
+    font-size: 1em;
+    line-height: em(58px);
+
+
+    @at-root .exchange-rates__td--place {
+      padding-right: percentage(36px/260px);
+      width: percentage(127/260);
+    }
+
+    @at-root .exchange-rates__td--buy {
+      width: percentage(83/260);
+    }
+
+    @at-root .exchange-rates__td--sale {
+      width: percentage(55/260);
+    }
+  }
+
+  &__inner-btn {
+    text-align: center;
+  }
+
+}
+//END exchange-rates

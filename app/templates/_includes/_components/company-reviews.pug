@@ -1,0 +1,58 @@
+.company-reviews
+  .company-reviews__groupname
+    |Отзывы о банках
+
+  - for(var i = 0; i < 4; i++)
+
+    .company-reviews__item
+      .company-reviews__img
+        .company-reviews__location
+          |Москва
+        .company-reviews__logo
+          img(src="images/logo-tinkof-middle.png")
+      //END company-reviews__img
+
+      .company-reviews__descr
+        .company-reviews__header
+          .company-reviews__title
+            |Поразительная жадность сбербанка
+          .company-reviews__stars-rating
+            include star-rating-view
+        //END.company-reviews__title
+
+        .company-reviews__text
+          |Услугами банка ВТБ 24 пользуюсь с 2008
+          |года- банковские карты, ячейка, автокредиты.
+          |Всегда уважительное отношение сотрудников банка,
+          |быстрое обслуживание, грамотность специалистов.
+          |Хочу выразить особую благодарность и отметить
+          |высокий профессиональный уровень сотрудников
+          |уровень уровень сотрудников уровень...
+        //END.company-reviews__text
+
+        .company-reviews__info
+          .company-reviews__date
+            |23.03.2017 10:50
+          a.company-reviews__comments-link(href="")
+            .icon-comments-link
+              svg(role="img"): use(xlink:href="#comments-link")
+            .company-reviews__qty-comments +56
+          .company-reviews__likes
+            .likes
+              button.likes__good
+                span.icon-like
+                  svg(role="img"): use(xlink:href="#like")
+                span.likes__qty 1
+              button.likes__bad
+                span.icon-like
+                  svg(role="img"): use(xlink:href="#dislike")
+                span.likes__qty 1
+
+      //END.company-reviews__descr
+
+    //END.company-reviews__item
+  .company-reviews__inner-btn-all
+    a.btn.btn--183px-40px.btn--transparent-blue Все отзывы
+
+
+//END.company-reviews

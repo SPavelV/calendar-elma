@@ -1,0 +1,87 @@
+.c-form.c-form_search
+  form#js-recipes-search.c-form__row.c-form__row_searchField(action='')
+    .input-holder.input-holder_rounded
+      input#js-recipes-search_input.input(type='text', placeholder='Поиск по рецептам и ингредиентам', name='q', value='')
+    button.btn.btn_search(type='submit', name='s') Найти
+  form.bx-filter.c-form__row.smartfilter(name='_form', action='/recipes/', method='get')
+    .c-tags.c-tags_overflow
+      .c-dropdown.bx-filter-parameters-box
+        a.btn.btn_sm.btn_tag.btn_tp.c-dropdown__toggler(href='#')
+          span.c-dropdown__value
+            | Категория
+            small
+          i.icn-chevron_d
+        .c-dropdown__menu.nano
+          ul.c-dropdown__list.nano-content
+            li.c-dropdown__item
+              .c-checkbox
+                label.c-label
+                  input#arrFilter_9_4294313645(type='checkbox', value='Y', name='arrFilter_9_4294313645', onclick='smartFilter.click(this)')
+                  span.c-checkbox__label
+                    | Выпечка (
+                    span(data-role='count_arrFilter_9_4294313645') 16
+                    | )
+            li.c-dropdown__item
+              .c-checkbox
+                label.c-label
+                  input#arrFilter_9_3677276003(type='checkbox', value='Y', name='arrFilter_9_3677276003', onclick='smartFilter.click(this)')
+                  span.c-checkbox__label
+                    | Горячие напитки (
+                    span(data-role='count_arrFilter_9_3677276003') 7
+                    | )
+            li.c-dropdown__item
+              .c-checkbox
+                label.c-label
+                  input#arrFilter_9_243448890(type='checkbox', value='Y', name='arrFilter_9_243448890', onclick='smartFilter.click(this)')
+                  span.c-checkbox__label
+                    | Десерты (
+                    span(data-role='count_arrFilter_9_243448890') 13
+                    | )
+            li.c-dropdown__item
+              .c-checkbox
+                label.c-label
+                  input#arrFilter_9_1977675848(type='checkbox', value='Y', name='arrFilter_9_1977675848', onclick='smartFilter.click(this)')
+                  span.c-checkbox__label
+                    | Завтраки (
+                    span(data-role='count_arrFilter_9_1977675848') 15
+                    | )
+            li.c-dropdown__item
+              .c-checkbox
+                label.c-label
+                  input#arrFilter_9_1074734991(type='checkbox', value='Y', name='arrFilter_9_1074734991', onclick='smartFilter.click(this)')
+                  span.c-checkbox__label
+                    | Закуски (
+                    span(data-role='count_arrFilter_9_1074734991') 24
+                    | )
+            li.c-dropdown__item
+              .c-checkbox
+                label.c-label
+                  input#arrFilter_9_1473079164(type='checkbox', value='Y', name='arrFilter_9_1473079164', onclick='smartFilter.click(this)')
+                  span.c-checkbox__label
+                    | Основные блюда (
+                    span(data-role='count_arrFilter_9_1473079164') 52
+                    | )
+            li.c-dropdown__item
+              .c-checkbox
+                label.c-label
+                  input#arrFilter_9_3259571447(type='checkbox', value='Y', name='arrFilter_9_3259571447', onclick='smartFilter.click(this)')
+                  span.c-checkbox__label
+                    | Салаты (
+                    span(data-role='count_arrFilter_9_3259571447') 15
+                    | )
+            li.c-dropdown__item
+              .c-checkbox
+                label.c-label
+                  input#arrFilter_9_2881221524(type='checkbox', value='Y', name='arrFilter_9_2881221524', onclick='smartFilter.click(this)')
+                  span.c-checkbox__label
+                    | Супы (
+                    span(data-role='count_arrFilter_9_2881221524') 17
+                    | )
+            li.c-dropdown__item
+              .c-checkbox
+                label.c-label
+                  input#arrFilter_9_2490976668(type='checkbox', value='Y', name='arrFilter_9_2490976668', onclick='smartFilter.click(this)')
+                  span.c-checkbox__label
+                    | Холодные напитки (
+                    span(data-role='count_arrFilter_9_2490976668') 2
+                    | )

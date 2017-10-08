@@ -1,0 +1,268 @@
+extends _layouts/default
+
+block content
+  body
+
+    main.calendar
+
+      .calendar-section.calendar-section--nav
+
+        include _includes/_calendar-nav
+        include _includes/_calendar-week
+
+      //END.calendar-section.calendar-section--nav
+
+      include _includes/_calendar-today
+
+      .calendar__table
+
+        table.table-cal
+          thead.table-cal__thead
+            tr.table-cal__tr
+              th.table-cal__th
+                | Пн
+              th.table-cal__th
+                | Вт
+              th.table-cal__th
+                | Ср
+              th.table-cal__th
+                | Чт
+              th.table-cal__th
+                | Пт
+              th.table-cal__th.day-off
+                | Сб
+              th.table-cal__th.day-off
+                | Вс
+          //END thead.table-cal__thead
+
+          tbody.table-cal__body
+
+            tr.table-cal__tr
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number
+                    | 1&nbsp;
+                    span мая
+                  .table-cal__events
+                    .table-cal__event.table-cal__event--holiday
+                      .table-cal__title.table-cal__title--holiday Праздник Весны и Труда
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 2
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 3
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 4
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 5
+                  .table-cal__events
+                    .table-cal__event
+                      .table-cal__title
+                        | Провести встречу
+                      .table-cal__time 11:00
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 6
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 7
+
+            tr.table-cal__tr
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 8
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 9
+                  .table-cal__events
+                    .table-cal__event.table-cal__event--holiday
+                      .table-cal__title.table-cal__title--holiday День победы
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 10
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 11
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 12
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 13
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number.active 14
+                  .table-cal__events
+                    .table-cal__event
+                      .table-cal__title
+                        | Забрать машину из ремонта
+                      .table-cal__time
+                        | 8:00
+
+                    .table-cal__event
+                      .table-cal__title
+                        | Отвезти дочь на гимнастику
+                      .table-cal__time
+                        | 11:00
+
+                    .table-cal__event
+                      .table-cal__title
+                        | Навестить друга в больнице
+                      .table-cal__time
+                        | 14:00
+
+                    .table-cal__event
+                      .table-cal__title
+                        | Встретить тещу на вокзале
+                      .table-cal__time
+                        | 18:00
+
+            tr.table-cal__tr
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 15
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 16
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 17
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 18
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 19
+                  .table-cal__events
+                    .table-cal__event
+                      .table-cal__title День рождение друга
+                      .table-cal__time 19:00
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 20
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 21
+
+            tr.table-cal__tr
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 22
+                  .table-cal__events
+                    .table-cal__event
+                      .table-cal__title Аттестация на работе
+                      .table-cal__time 8:00
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 23
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 24
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 25
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 26
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 27
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 28
+
+              tr.table-cal__tr
+                td.table-cal__td
+                  .table-cal__descr-day
+                    .table-cal__date-number 29
+                td.table-cal__td
+                  .table-cal__descr-day
+                    .table-cal__date-number 30
+                td.table-cal__td
+                  .table-cal__descr-day
+                    .table-cal__date-number 31
+                td.table-cal__td
+                  .table-cal__descr-day
+                    .table-cal__date-number
+                      | 1&nbsp;
+                      span июня
+                td.table-cal__td
+                  .table-cal__descr-day
+                    .table-cal__date-number 2
+                td.table-cal__td
+                  .table-cal__descr-day
+                    .table-cal__date-number 3
+                td.table-cal__td
+                  .table-cal__descr-day
+                    .table-cal__date-number 4
+
+            tr.table-cal__tr
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 5
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 6
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 7
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 8
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 9
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 10
+              td.table-cal__td
+                .table-cal__descr-day
+                  .table-cal__date-number 11
+
+          //END tbody.table-cal__body
+
+        //END table.table-calendar
+
+        .calendar__next-month
+          .next-month Июнь
+
+      //END.calendar__table
+
+      .calendar__list-events
+
+        ul.list-events
+          li.list-events__item
+            .list-events__time
+              .list-events__start 8:00
+              .list-events__end 9:00
+            .list-events__descr Забрать машину из ремонта
+
+          li.list-events__item.current
+            .list-events__time
+              .list-events__start 11:00
+              .list-events__end 13:00
+            .list-events__descr Отвезти дочь на гимнастику
+
+          li.list-events__item
+            .list-events__time
+              .list-events__start 14:00
+              .list-events__end 15:00
+            .list-events__descr Навестить друга в больнице
+
+          li.list-events__item.important
+            .list-events__time
+              .list-events__start 18:00
+              .list-events__end 19:00
+            .list-events__descr Встретить тещу на вокзале
+
+        //END.list-event
+
+      //END.calendar__list-event
+
+      include _includes/_calendar-nav-footer
+    //END .calendar
+
+  //END .calendar-inner

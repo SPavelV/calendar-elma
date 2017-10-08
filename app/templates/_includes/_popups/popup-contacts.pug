@@ -1,0 +1,30 @@
+// popup-contacts-message
+section.popup.mfp-hide#popup-message
+  .popup__content
+    h3 Написать в офис
+    form(action="",
+    method="")
+      fieldset
+        .popup__field
+          label.label.label-popup(for="name") Ваше имя и фамилия*
+          input.input.input-popup(type="text",name="name", id="name", placeholder="Иванов Иван")
+        .popup__field
+          label.label.label-popup(for="phone") Номер телефона*
+          input.input.input-popup(type="tel",name="phone",id="phone")
+        .popup__field
+          label.label.label-popup(for="email") Ваш E-mail*
+          input.input.input-popup(type="email",name="email",id="email")
+        .popup__field
+          label.label.label-popup(for="comment") Комментарий
+          textarea.textarea.textarea-popup(rows="5" cols="45" ,name="comment",id="comment")
+        .popup__field
+          .captcha
+            .captcha__img
+              img(src="images/captcha.jpg")
+            .captcha__input
+              label.label.label-popup(for="captcha") Введите код с картинки
+              input.input.input-popup(type="text", name="captcha",value="",id="captcha")
+        .popup__field
+          input(type='submit' value="Отправить сообщение").btn.btn-submit
+
+// END popup-contacts-message

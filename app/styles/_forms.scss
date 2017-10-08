@@ -1,0 +1,135 @@
+@import 'variables';
+@import 'elma-sprite';
+
+//forms
+
+textarea {
+  width: 100%;
+  background-color: white;
+  resize: none;
+
+  &:focus {
+    border: 1px solid #7ebdfc;
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $dark-blue;
+  }
+
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $dark-blue;
+  }
+
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: $dark-blue;
+  }
+
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: $dark-blue;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $dark-blue;
+  }
+}
+
+input {
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+
+  &:focus {
+    border: 1px solid #7ebdfc;
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $dark-blue;
+  }
+
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $dark-blue;
+  }
+
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: $dark-blue;
+  }
+
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: $dark-blue;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $dark-blue;
+  }
+}
+
+.input {
+  width: 100%;
+  display: block;
+  color: $first-color;
+  font-family: inherit;
+  border: 0;
+
+  &-search {
+    padding: 7px 6px;
+    border: 0;
+    border-bottom: 1px solid $light-gray;
+    font-weight: $f-bold;
+    font-size: 1em;
+  }
+
+  &-select-region {
+    @extend .input-search;
+  }
+
+  &--reivew {
+    padding: 13px 17px 14px 14px;
+    border: 1px solid #c6d3eb;
+    border-radius: 2px;
+    color: $dark-blue;
+    font-size: 1em;
+    text-align: left;
+
+    &:hover {
+      border: 1px solid #abc2eb;
+    }
+  }
+}
+
+.label {
+  color: $first-color;
+  font-family: inherit;
+  display: block;
+
+  &-search-header {
+    cursor: pointer;
+  }
+
+}
+
+.textarea {
+  width: 100%;
+  font-family: inherit;
+
+  &--review {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    padding: 13px 14px;
+    border: 1px solid #c6d3eb;
+    border-radius: 2px;
+    color: $dark-blue;
+    font-size: 1em;
+    text-align: left;
+
+    &:hover {
+      border: 1px solid #abc2eb;
+    }
+  }
+
+}
+
+//END forms
